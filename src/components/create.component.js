@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Swal from 'sweetalert2'
 
 export default class Create extends Component {
   constructor(props) {
@@ -30,6 +31,12 @@ export default class Create extends Component {
       productName: this.state.productName,
       productPrice: this.state.productPrice
     };
+    Swal.fire({
+      icon: 'success',
+      title: 'Product has been added.',
+      showConfirmButton: false,
+      timer: 1500
+    });
     axios.post('http://localhost:9000/api/v2/products', obj)
         .then(res => console.log(res.data));
     
@@ -55,7 +62,7 @@ export default class Create extends Component {
                 </div>
                 <div className="form-group">
                     <label>Product Price: </label>
-                    <input type="text" 
+                    <input type="number" 
                       className="form-control"
                       value={this.state.productPrice}
                       onChange={this.onChangeProductPrice}

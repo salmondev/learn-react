@@ -39,7 +39,7 @@ class TableRow extends Component {
             {this.props.obj.productName}
           </td>
           <td>
-            {this.props.obj.productPrice}
+            ฿ {this.props.obj.productPrice}
           </td>
           <td>
             <Link to={"/edit/"+this.props.obj._id} className="btn btn-primary">Edit</Link>
