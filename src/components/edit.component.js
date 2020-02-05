@@ -16,7 +16,7 @@ export default class Edit extends Component {
   }
 
   componentDidMount() {
-      axios.get('http://localhost:9000/api/v2/products/'+this.props.match.params.id)
+      axios.get('http://128.199.208.132:9000/api/v2/products/'+this.props.match.params.id)
           .then(response => {
               this.setState({ 
                 productName: response.data.productName, 
@@ -50,7 +50,7 @@ export default class Edit extends Component {
       showConfirmButton: false,
       timer: 1500
     });
-    axios.put('http://localhost:9000/api/v2/products/'+this.props.match.params.id, obj)
+    axios.put('http://128.199.208.132:9000/api/v2/products/'+this.props.match.params.id, obj)
         .then(res => console.log(res.data));
     
     this.props.history.push('/index');

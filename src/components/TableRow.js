@@ -26,7 +26,7 @@ class TableRow extends Component {
                 'success'
               );
               // 
-              axios.delete('http://localhost:9000/api/v2/products/'+this.props.obj._id)
+              axios.delete('http://128.199.208.132:9000/api/v2/products/'+this.props.obj._id)
                 .then(console.log('Deleted'))
                 .catch(err => console.log(err))
             }

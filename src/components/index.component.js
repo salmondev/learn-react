@@ -15,7 +15,7 @@ export default class Index extends Component {
   
   componentDidMount() {
     axios
-      .get("http://localhost:9000/api/v2/products")
+      .get("http://128.199.208.132:9000/api/v2/products")
       .then( this.re
         /*response => {
         // this.setState({ product: response.data });

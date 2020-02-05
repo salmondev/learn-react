@@ -37,7 +37,7 @@ export default class Create extends Component {
       showConfirmButton: false,
       timer: 1500
     });
-    axios.post('http://localhost:9000/api/v2/products', obj)
+    axios.post('http://128.199.208.132:9000/api/v2/products', obj)
         .then(res => console.log(res.data));
     
     this.setState({
